@@ -7,3 +7,16 @@
 // 6 -> да
 // 7 -> да
 // 1 -> нет
+
+Console.WriteLine("Введите цифру дня недели: ");
+int number = Convert.ToInt32(Console.ReadLine());
+// Проверка на корректность входных данных
+if (number > 7 ^ number < 1)
+{
+    Console.WriteLine($"{number} -> -1 (такого дня недели нет!)");
+    Environment.Exit(0);
+}
+// Основное решение
+if (number > 5) Console.WriteLine($"{number} -> да"); 
+else Console.WriteLine($"{number} -> нет");
+

@@ -9,3 +9,19 @@
 
 // 32679 -> 6
 
+Console.Write("Введите число=");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number < 99) //Проверяем количество цифр, если меньше трех, то выход
+{
+    Console.Write($"{number} -> третьей цифры нет");
+    Environment.Exit(0); //Выход
+}
+
+int N = 3;
+int count = 1;
+int renumber = number; //Чтоб не затереть число, дублируем для себя
+
+while ((number /= 10) != 0) count++; //Определяем разрядность числа (сколько цифр в числе)
+while ((count--) != N) renumber /= 10; //Делим число на 10 пока не останется N (первые три цифры в числе)
+
+Console.WriteLine($"renumber -> {renumber % 10}");//Делим на 10, определяем остаток (третья цифра)

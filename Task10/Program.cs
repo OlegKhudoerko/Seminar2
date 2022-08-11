@@ -7,3 +7,6 @@
 // 782 -> 8
 // 918 -> 1
 
+Console.Write("Введите трехзначное число=");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"{number} -> {number/10 % 10}"); // Вывод второй цифры числа

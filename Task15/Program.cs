@@ -14,9 +14,9 @@ int number = Convert.ToInt32(Console.ReadLine());
 if (number > 7 ^ number < 1)
 {
     Console.WriteLine($"{number} -> -1 (такого дня недели нет!)");
-    Environment.Exit(0);
+    Environment.Exit(0); //Выход
 }
 // Основное решение
-if (number > 5) Console.WriteLine($"{number} -> да"); 
+if (number > 5) Console.WriteLine($"{number} -> да");
 else Console.WriteLine($"{number} -> нет");
 
